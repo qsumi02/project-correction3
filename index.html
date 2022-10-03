@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Mukta:wght@300&family=Roboto&family=Teko:wght@500&display=swap" rel="stylesheet">
+
+    
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+<script src="https://kit.fontawesome.com/e056f5cd61.js" crossorigin="anonymous"></script>
+
+<!-- JavaScript Bundle with Popper -->
+
+
+
+
+    
+    
+
+</head>
+
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: "josefin sans";
+    }
+    
+   /* *::after, *::before {
+        font-family: "font awesome 6 pro";
+    } */
+    body {
+        margin: 0;
+    }
+    
+    /* The next thing to do is to take the main or important tags and class that are mostly repeatable*/
+
+    h1, h2, h4, p {
+        margin: 0; /*they use to adding margin somethings*/
+    }
+    section {
+        padding: 5em 0; /* good to use em paddding all the section makes it constant and befitting*/
+    }
+
+  
+
+    .title{
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: -30px;
+        font-weight: bold;
+    }
+    .container { /*to make a good and clean presentation*/
+        max-width: 70em; 
+        width: 85%;
+        margin: 0 auto; /*To shift it to the middle*/
+    }
+    .myself{
+        text-align: center;
+        margin: 30px;
+        font-weight: bold;
+        padding-top: 10px;
+    }
+     .myself2{
+        padding-left: -10px;
+        padding: 10px;
+        font-family: "roboto";
+        font-size: medium;
+        padding-top: 10px;
+    }
+    @media only screen and (max-width: 600px) {
+        .myself{
+            padding-top: 38px;
+        }
+        .myself2{
+            padding-top: 18px;
+        }
+    }
+    .btn {
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.125rem;
+        margin-top: 1.5em;
+        padding: 10px 30px;
+        border-radius: .25em;
+        color:#ba3f19;
+        background: black;
+        transition: opacity 250ms linear;
+        opacity: 1;
+    }
+    .btn:hover {
+        opacity: .7;
+        background-color: ;
+    }
+    .cta{
+        padding: 6px 0 20px 0;
+    }
+    header {
+        /* position: ; fixing the position make the header fixed to one point so whenever we are scrolling it doesn't affect
+        /* top: 0;
+        left: 0;
+        right: 0;
+        
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        z-index: 10; /*To show on top of all other content no distraction make sure it's with higher number you'll remember*/
+      */
+    } 
+    .navbar{
+        background-color: #ed5425;
+    }
+    .navbar-brand {
+       padding: 2px 10px 2px 5px;
+
+        
+        font-weight: 700;
+        text-transform: uppercase;
+         font-size: clamp(1rem, 5vw + 1rem, 2rem); /* I know you won't understand this thou, enjoy!!! */
+        color:black;
+       
+    }
+    .brand-icon{
+        padding-right: 5px;
+        color: white;
+        opacity: 0.8;
+    }
+    .navbar-nav{
+        padding-left: 120px;
+        margin: 0;
+    }
+    .link-icon{
+        padding-right: 6px;
+        color: black;
+    }
+    .nav-item {
+        font-size:large;
+        font-weight: bold;
+        /* border-right: 1px solid ; */
+        padding: 0 0 0 100px ;
+        list-style-type: none;
+        display: inline-block;
+        
+    }
+    .nav-item a {
+        text-decoration: none;
+      
+        font-weight: 500;
+        color:white;
+        
+    
+        position: relative;
+    }
+    .nav-item a:hover {
+      color: black;
+      transition: .5s ease-in-out;
+    /* content: ''; */
+    /* position: absolute; */
+    /* left: 0;
+    width: 70%;
+    height: 100%; */
+    /* background: rgba(255, 255, 255, 0.222); */
+    /* color: ;
+    transform: scale(0);
+    transition: 0.5 ease; */
+    }
+    /* .nav-item a:hover::after{
+        width: 70%;
+        transform: scale(1);
+        color: #ba3f19;
+    } */
+    .main-content {
+        background: radial-gradient(rgba(30, 27, 27, 0.516), rgba(17, 12, 12, 0.434)), rgb(30, 27, 27);
+        position: relative;
+        top: 0;
+        left: 0;
+    }
+    .head-content { /*no images so it didn't work*/
+        display: flex;
+        align-items: center;
+        justify-content: space-between;border-radius: 50%;
+        margin: 5px 10px;
+        border-radius: 50%;
+
+    }
+    .image{
+        height: 80%;
+        width: 80%;
+        border-radius: 50%;
+    }
+    .head-con{
+       padding-left: 10%;
+    }
+    .hello{
+        text-align: center;
+        padding-bottom: 5px;
+        color: white;
+    }
+    .sumayyah{
+        font-family:" roboto";
+        line-height: 1.3;
+        font-size:x-large;
+    }
+    .section{
+        /* background: radial-gradient(rgba(30, 27, 27, 0.516), rgba(17, 12, 12, 0.434)), rgb(30, 27, 27); */
+        background-color: #df643f;
+        position: relative;
+        width: auto;
+        height:auto;
+        text-align: center;
+        padding-top: 35px;
+        font-family: "roboto";
+        font-size: x-large;
+        color: #fff;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .main-content{
+          
+            display: flex;
+            flex-direction: column;
+        }
+        .head-content{
+         
+            display: flex;
+            flex-direction: column;
+           
+        }
+ .image {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+
+  }
+  .head-con{
+    margin: 5px 0;
+    display: flex;
+  flex-direction: column;
+  }
+  .head{
+   
+    display: flex;
+    flex-direction: column;
+   
+  }
+ 
+
+  
+
+.head-description{
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+}
+
+.image2 {
+        display:flex;
+        justify-content: center;
+        padding-top: 55px;
+        height: 60%;/*spread to 100%*/
+        width: 60%;
+        border-radius: 10% 50% 0 10%;
+        /* object-fit: cover; it reset the image and befit into the content your want */
+         
+    }
+    @media only screen and (max-width: 600px){
+       
+       .image2{
+            display: flex;
+            align-items: center;
+            padding: 100px 0 30px 0;
+        }
+    }
+    @media only screen and (min-width: 600px) {
+        .image2{
+            display:flex;
+            width: 100%;
+           
+        }
+    }
+    .get{
+        padding-bottom: 15px;
+    }
+    h1 {
+        font-size: clamp(3.5rem, 5vw + 1rem, 4.5rem);
+        color: #df643f;
+    }
+    h2 {
+        font-size: clamp(2.5rem, 5vw + 1rem, 1.5rem);
+        color: #ba3f19;
+    }
+    h3 {
+        font-size: clamp (2rem, 5vw + 1rem, 1rem);
+    }
+    .head-description {
+        margin-top: 1.3em;
+        color: #fff;
+        text-align: center;
+
+    }
+
+    .second-section{
+        padding-bottom: 0;
+        
+    }
+    #footer{
+        width: auto;
+        height: 10em;
+      
+        text-align: center;
+        padding-top: 3rem;
+    }
+    .icons{
+    
+        align-items: center;
+        margin: 3px;
+        color: #ba3f19;
+    }
+        .icon a{
+        text-decoration: none;
+        transition: .3s ease;
+
+    }
+    .icons:hover{
+       
+        color:black;
+    }
+    .last-section{
+        padding: 0;
+    }
+     .font{
+      display: flex;
+      justify-content: center; 
+        align-items: center;
+        padding-top: 30px;
+     }
+     @media only screen and (max-width: 600px){
+        .font{padding-top: 60px;
+
+     }
+    }
+     .copyright{
+        font-size: smaller;
+        margin: 20px;
+     }
+    
+</style>
+<body>  
+    <header>
+
+    <nav class="navbar navbar-expand-lg  ">
+      <a class="navbar-brand" href="#"><i class=" brand-icon fa-regular fa-snowflake fa-spin" style="--fa-animation-duration: 5s;"></i>qsumi</a>
+        <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#"><i class=" link-icon fa-solid fa-house"></i>HOME <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class=" link-icon fa-solid fa-comment"></i>ABOUT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class=" link-icon fa-solid fa-circle-dot"></i></i>CLICK ME</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#"><i class=" link-icon fa-sharp fa-solid fa-phone"></i>CONTACT</a>
+              </li>
+              </ul>
+             </div>
+            </nav>
+    </header>
+
+    <section class="main-content"> <!--This is where you make the flex display and also set background image or color if you want-->
+        <!-- I used section to trigger other section to make a constant padding area-->
+
+        <div class="  container"> <!--To have a constant and befitting width-->
+
+            <div class="head-content">
+                <img class="image"  src="https://i.pinimg.com/236x/bc/77/f8/bc77f8b1a3c7bfe6542bcb57eec4b6e3.jpg" alt=""> 
+
+                <div class="head-con"><br>
+                    <div class="head">
+                        <h1  class="intro">I'm Sumayyah, </h1>
+                        <h2>frontend developer and <span>a programmer</span></h2>
+                    </div><br>
+                    <div class="head-description">
+
+                     <h3 class="hello"> Hello World!</h3>
+                        <p class="sumayyah">My Name is Sumayyah Tajudeen. I'm a second year medical student of the university of Ilorin. I love anything good and comfortable also love to code.</p>
+                    </div>
+                </div> 
+            </div>
+
+        </div>
+
+    </section> 
+
+    <section class="aboutme">
+
+        <div class="container">
+
+            <h2 class="title">About Me</h2>
+
+            <div class="display-container row">
+
+                <div class="box col-lg-4 col-md-12">
+                    <img class="image2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgdiqMFBvWzM_bwKPwhKrPJlS7_2idsKqTyw&usqp=CAU" alt="" srcset="">
+
+                    <div>
+                        <i class="font fa-solid fa-comment-dots fa-3x fa-bounce"  style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1;"></i>
+
+                        <h3 class="myself">My choice</h3>
+                       
+                        <p class="myself2">I took interest in coding, not by self realisation but by advice and encouragement by one of my very own person who is also a lover of code.</p>
+                    </div>
+                </div>
+
+                <div class="box col-lg-4 col-md-12">
+                    <img class="image2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRjFxZwmqL011pTMq8PXl_f-8kWwV4KrHx6Q&usqp=CAU" alt="" srcset="">
+                    <div>
+                        <i class="font fa-solid fa-comment-dots fa-3x fa-bounce "style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1;"></i>
+
+                        <h3 class="myself">My Hobbies</h3>
+                        
+                        <p class="myself2">My Hobbies include things that makes me productive and assertive, I also love to have fun and enjoy reminiscing good memories.</p>
+                    </div>
+                </div>
+
+                <div class="box col-lg-4 col-md-12">
+                    <img class="image2" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiqCvxKvb1-Xs-JL5HSK7MeKQGmu6Hh4wYZg&usqp=CAU" alt="" srcset="">
+                    <div>
+                        <i class="font fa-solid fa-comment-dots fa-3x fa-bounce "style=" --fa-bounce-start-scale-x: 1; --fa-bounce-start-scale-y: 1; --fa-bounce-jump-scale-x: 1; --fa-bounce-jump-scale-y: 1; --fa-bounce-land-scale-x: 1; --fa-bounce-land-scale-y: 1;"></i>
+
+                        <h3 class="myself">My Vibes</h3>
+                        
+                        <p class="myself2">You would tell, I love to be with those that share a common goal as me, for the vibe is just going to be there!</p>
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+    </section>
+
+<section class="second-section">
+    <div class="container-fluid  section row">
+        <div class="Touch col-lg-12">
+         <h3 class="get">Get In Touch</h3>
+         <p> Do you Have same experience as me on coding? or also a lover of good vibes? then let's get in touch so we can share ideas and vibe together! </p>
+         <div class="cta">
+
+            <a href="#" class="btn cta-btn">Click me!</a>
+    
+        </div>
+    
+
+
+
+      </div>
+    </div>
+</section>
+
+   
+
+<section class="last-section">
+  
+
+        <footer id="footer">
+
+            <div>
+              <a href="#"><i class=" icons fa-brands fa-facebook-f fa-1x"></i></a> 
+              <a href="#"><i class=" icons fa-brands fa-twitter fa-1x"></i></a> 
+              <a href="#"><i class=" icons fa-brands fa-instagram fa-1x"></i></a> 
+              <a href="#"><i class=" icons fa-solid fa-envelope fa-1x"></i></a> 
+           </div>
+
+              <p class="copyright">© Copyright 2022 Qsumi.</p>
+
+        </footer>
+         
+
+    
+</section>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
